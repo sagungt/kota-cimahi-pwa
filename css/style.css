@@ -1,0 +1,60 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+section {
+    padding: 0;
+}
+
+.logo {
+    margin: 0 auto 0 auto;
+}
+
+a[target='_blank']::after {
+    content: '\2750';
+}
+
+.slider {
+    margin-top: -65px;
+    z-index: -1;
+}
+
+.parallax-container {
+    top: -100px;
+    height: 400px;
+    z-index: -1;
+    width: 100%;
+}
+
+.slides img, .parallax img {
+    filter: blur(5px);
+}
+
+p {
+    text-align: justify;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.caption {
+    padding-top: 150px;
+}
+
+.no-shadows {
+    box-shadow: none !important;
+}
+
+.footer-copyright {
+    padding: 20px 0 20px 0;
+}
+
+.image {
+    max-width: 50%;
+    height: auto;
+}
+
+#discovery {
+    font-size: 24px;
+}

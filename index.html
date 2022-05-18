@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#1de9b6">
+    <meta name="description" content="Aplikasi PWA Penjelasan singkat tentang Kota Cimahi">
+    <link rel="icon" href="img/icons/icon-512x512.png" type="image/png">
+    <title>Kota Cimahi</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="transparent no-shadows" role="navigation">
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo white-text" id="logo-container">Kota Cimahi</a>
+            <a href="#" class="sidenav-trigger white-text" data-target="nav-mobile">☰</a>
+
+            <ul class="topnav right hide-on-med-and-down"></ul>
+            <ul class="sidenav" id="nav-mobile"></ul>
+        </div>
+    </nav>
+
+    <div id="body-content"></div>
+
+    <!-- Discovery button -->
+    <div class="fixed-action-btn">
+        <a id="discovery" class="waves-effect waves-light btn-large btn-floating pulse">?</a>
+    </div>
+
+    <!-- Tap Target Structure -->
+    <div class="tap-target teal" data-target="discovery">
+        <div class="tap-target-content">
+            <h5>Tahukah Kamu ?</h5>
+            <p>Di kawasan Cimahi ada satu kampung adat bernama Desa Cirendeu. Penduduk Cirendeu tidak makan nasi dan
+                olahan turunan dari beras lainnya mereka ganti dengan olahan singkong sebagai
+                makanan pokok.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-copyright teal">
+            <div class="container">
+                © 2020 Kota Cimahi. <i><a class="black-text" href="https://cimahikota.go.id" target="_blank">Website
+                        Resmi Kota
+                        Cimahi </a></i>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/materialize.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", function () {
+                navigator.serviceWorker
+                    .register("/service-worker.js")
+                    .then(function () {
+                        console.log("ServiceWorker berhasil didaftarkan");
+                    })
+                    .catch(function () {
+                        console.log("ServiceWorker gagal didaftarkan");
+                    });
+            });
+        } else {
+            console.log("ServiceWorker belum didukung browser ini")
+        }
+    </script>
+</body>
+
+</html>
